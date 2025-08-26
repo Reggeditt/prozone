@@ -37,11 +37,11 @@ export function ContactCTA() {
           {/* Content */}
           <div className="text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your Project?
+              {`Ready to Start Your Project?`}
             </h2>
             <p className="text-xl text-orange-100 mb-8">
               Get in touch with our expert team for a free consultation and quote. 
-              We're here to bring your construction vision to life.
+              We&apos;re here to bring your construction vision to life.
             </p>
 
             <div className="space-y-6">
@@ -73,7 +73,7 @@ export function ContactCTA() {
                 </div>
                 <div>
                   <div className="font-semibold">Visit Us</div>
-                  <div className="text-orange-100">Accra & Kumasi, Ghana</div>
+                  <div className="text-orange-100">{`Accra & Kumasi, Ghana`}</div>
                 </div>
               </div>
             </div>
