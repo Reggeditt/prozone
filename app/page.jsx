@@ -1,8 +1,8 @@
-import { Hero } from '@/components/sections/hero';
-import { ServicesOverview } from '@/components/sections/services-overview';
-import { AboutPreview } from '@/components/sections/about-preview';
-import { ProjectsShowcase } from '@/components/sections/projects-showcase';
-import { ContactCTA } from '@/components/sections/contact-cta';
+import { AboutPreview } from "@/components/sections/about-preview";
+import ContactCTA from "@/components/sections/contact-cta";
+import { Hero } from "@/components/sections/hero";
+import { ProjectsShowcase } from "@/components/sections/projects-showcase";
+import { ServicesOverview } from "@/components/sections/services-overview";
 
 export default function Home() {
   return (

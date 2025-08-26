@@ -27,7 +27,7 @@ export function AboutPreview() {
             <div className="space-y-4 mb-8">
               {constructionContent.about.values.map((value, index) => {
                 const IconComponent = valueIcons[value as keyof typeof valueIcons] || CheckCircle;
-                
+
                 return (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">

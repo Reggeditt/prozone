@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { constructionContent } from "@/lib/construction-content";
 
-export function ContactCTA() {
+export default function ContactCTA() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +17,7 @@ export function ContactCTA() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
