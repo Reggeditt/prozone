@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { constructionContent } from "@/lib/construction-content";
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: `${constructionContent.global.companyName} - ${constructionContent.global.tagline}`,
   description: constructionContent.about.overview,
   keywords: 'construction, building, electrical works, CCTV installation, gate automation, Ghana construction company',
@@ -30,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body

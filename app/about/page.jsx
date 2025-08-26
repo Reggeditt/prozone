@@ -57,7 +57,7 @@ export default function AboutPage() {
                 {constructionContent.about.overview}
               </p>
               <p className="text-gray-600 mb-8">
-                Since our establishment, we have been at the forefront of Ghana's construction 
+                Since our establishment, we have been at the forefront of Ghana&apos;s construction 
                 industry, delivering innovative solutions that combine traditional craftsmanship 
                 with modern technology. Our commitment to excellence has earned us the trust of 
                 hundreds of satisfied clients across the country.
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 text-lg">
-                  To be Ghana's leading construction company, recognized for innovation, 
+                  To be Ghana&apos;s leading construction company, recognized for innovation, 
                   sustainability, and exceptional client service in every project we undertake.
                 </p>
               </CardContent>
@@ -137,7 +137,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {constructionContent.about.values.map((value, index) => {
-              const IconComponent = valueIcons[value as keyof typeof valueIcons] || CheckCircle;
+              const IconComponent = valueIcons[value] || CheckCircle;
               
               return (
                 <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">

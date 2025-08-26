@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, Send, MessageSquare } from "lucide-react";
 import { constructionContent } from "@/lib/construction-content";
+import { Link } from 'next/navigation'
 
 export default function ContactPage() {
   const [contactForm, setContactForm] = useState({
@@ -28,24 +29,24 @@ export default function ContactPage() {
     description: ""
   });
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = (e) => {
     e.preventDefault();
     console.log("Contact form submitted:", contactForm);
   };
 
-  const handleQuoteSubmit = (e: React.FormEvent) => {
+  const handleQuoteSubmit = (e) => {
     e.preventDefault();
     console.log("Quote form submitted:", quoteForm);
   };
 
-  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleContactChange = (e) => {
     setContactForm({
       ...contactForm,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleQuoteChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleQuoteChange = (e) => {
     setQuoteForm({
       ...quoteForm,
       [e.target.name]: e.target.value
@@ -100,9 +101,9 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   {constructionContent.contact.info.phones.map((phone, index) => (
                     <div key={index} className="text-gray-600">
-                      <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:text-orange-600 transition-colors">
+                      <Link href={`tel:${phone.replace(/\s/g, '')}`} className="hover:text-orange-600 transition-colors">
                         {phone}
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -178,14 +179,14 @@ export default function ContactPage() {
                   </CardTitle>
                 </div>
                 <p className="text-gray-600">
-                  Have a question or need more information? Send us a message and we'll get back to you promptly.
+                  {`Have a question or need more information? Send us a message and we'll get back to you promptly.`}
                 </p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="contact-name">Full Name *</Label>
+                      <Label htmlFor="contact-name">Full Name</Label>
                       <Input
                         id="contact-name"
                         name="name"
@@ -196,7 +197,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="contact-phone">Phone Number *</Label>
+                      <Label htmlFor="contact-phone">Phone Number</Label>
                       <Input
                         id="contact-phone"
                         name="phone"
@@ -209,7 +210,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="contact-email">Email Address *</Label>
+                    <Label htmlFor="contact-email">Email Address</Label>
                     <Input
                       id="contact-email"
                       name="email"
@@ -222,7 +223,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="contact-message">Message *</Label>
+                    <Label htmlFor="contact-message">Message</Label>
                     <Textarea
                       id="contact-message"
                       name="message"

@@ -80,7 +80,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {constructionContent.services.categories.map((category, index) => {
-              const IconComponent = categoryIcons[category.title as keyof typeof categoryIcons] || Building;
+              const IconComponent = categoryIcons[category.title] || Building;
               
               return (
                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
@@ -131,7 +131,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {constructionContent.services.allServices.map((service, index) => {
-              const IconComponent = serviceIcons[service as keyof typeof serviceIcons] || Building;
+              const IconComponent = serviceIcons[service] || Building;
               
               return (
                 <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
