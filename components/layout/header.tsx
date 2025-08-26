@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Mail, MapPin } from "lucide-react";
 import { constructionContent } from "@/lib/construction-content";
+import Image from "next/image";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,11 +47,9 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-orange-600 text-white p-2 rounded-lg">
-              <div className="w-6 h-6 flex items-center justify-center font-bold">
-                PZ
-              </div>
-            </div>
+            {/* <div className="bg-orange-600 text-white p-2 rounded-lg"> */}
+              <Image src="/images/logo-filled.png" alt="Logo" width={40} height={40} className="w-15 h-15 flex items-center justify-center font-bold" />
+            {/* </div> */}
             <div>
               <div className="font-bold text-lg text-gray-900">
                 {constructionContent.global.companyName}
