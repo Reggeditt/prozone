@@ -63,8 +63,8 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-xl text-orange-100 mb-8">
-              Ready to start your construction project? Get in touch with our expert team 
-              for professional consultation and detailed quotes.
+              {`Ready to start your construction project? Get in touch with our expert team 
+              for professional consultation and detailed quotes.`}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
