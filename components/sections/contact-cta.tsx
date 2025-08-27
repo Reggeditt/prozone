@@ -20,7 +20,8 @@ export default function ContactCTA() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData);
+    const message = `Hello%20my%20name%20is%20${formData.name.split(" ").join("%20")}%20%20${formData.message.split(" ").join("%20")}%20feel%20free%20to%20reach%20out%20to%20me%20at%20${formData.email.split(" ").join("%20")}%20or%20${formData.phone.split(" ").join("%20")}`
+    window.open(`https://wa.me/+233266469301?text=${message}`)
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

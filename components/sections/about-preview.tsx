@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Award, Clock, ArrowRight } from "lucide-react";
 import { constructionContent } from "@/lib/construction-content";
+import Link from "next/link";
 
 export function AboutPreview() {
   const valueIcons = {
@@ -44,13 +45,15 @@ export function AboutPreview() {
               <p className="text-gray-700">{constructionContent.about.mission}</p>
             </div>
 
-            <Button 
-              size="lg" 
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
-            >
-              Learn More About Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href={'/about'}>
+              <Button 
+                size="lg" 
+                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
+              >
+                Learn More About Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
 
           {/* Image */}

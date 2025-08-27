@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, ArrowRight } from "lucide-react";
 import { constructionContent } from "@/lib/construction-content";
+import Link from "next/link";
 
 export function ProjectsShowcase() {
   const projectImages = [
@@ -99,13 +100,15 @@ export function ProjectsShowcase() {
         </div>
 
         <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
-          >
-            View All Projects
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link href={'/projects'}>
+            <Button 
+              size="lg" 
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
+            >
+              View All Projects
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

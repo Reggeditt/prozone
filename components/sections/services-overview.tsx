@@ -10,6 +10,7 @@ import {
   ArrowRight 
 } from "lucide-react";
 import { constructionContent } from "@/lib/construction-content";
+import Link from "next/link";
 
 const serviceIcons = {
   "General Construction": Building,
@@ -66,13 +67,15 @@ export function ServicesOverview() {
         </div>
 
         <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
-          >
-            View All Services
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link href={'/services'}>
+            <Button 
+              size="lg" 
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
+            >
+              View All Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

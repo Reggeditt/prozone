@@ -30,12 +30,16 @@ export default function ContactPage() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    console.log("Contact form submitted:", contactForm);
+    const message = `Hello%20my%20name%20is%20${formData.name.split(" ").join("%20")}%20%20${formData.message.split(" ").join("%20")}%20feel%20free%20to%20reach%20out%20to%20me%20at%20${formData.email.split(" ").join("%20")}%20or%20${formData.phone.split(" ").join("%20")}`
+    window.open(`https://wa.me/+233266469301?text=${message}`)
   };
 
   const handleQuoteSubmit = (e) => {
     e.preventDefault();
-    console.log("Quote form submitted:", quoteForm);
+    const message = `
+    Hello%20Prozone,%20I%20would%20like%20to%20get%20a%20quote%20for%20my%20${quoteForm.projectType.split(" ").join("%20")}%20project;%20${quoteForm.description.split(" ").join("%20")}.%20My%20timeline%20is%20${quoteForm.timeline.split(" ").join("%20")}.%20I%20have%20a%20budget%20of%20${quoteForm.budget.split(" ").join("%20")}.
+    `
+    window.open(`https://wa.me/+233266469301?text=${message}`)
   };
 
   const handleContactChange = (e) => {

@@ -48,7 +48,13 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             {/* <div className="bg-orange-600 text-white p-2 rounded-lg"> */}
-              <Image src="/images/logo-filled.png" alt="Logo" width={40} height={40} className="w-15 h-15 flex items-center justify-center font-bold" />
+            <Image
+              src="/images/logo-filled.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="w-15 h-15 flex items-center justify-center font-bold"
+            />
             {/* </div> */}
             <div>
               <div className="font-bold text-lg text-gray-900">
@@ -74,9 +80,14 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button className="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700">
-              Get Quote
-            </Button>
+            <a
+              href="https://wa.me/+233266469301?text=Hello%20Prozone.%20I%saw%20your%20website%20and%20would%20like%20to%20get%20a%20quote%20"
+              target="blank"
+            >
+              <Button className="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700">
+                Get Quote
+              </Button>
+            </a>
 
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -97,9 +108,14 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
-                  <Button className="mt-4 bg-orange-600 hover:bg-orange-700">
-                    Get Quote
-                  </Button>
+                  <a
+                    href="https://wa.me/+233266469301?text=Hello%20Prozone.%20I%saw%20your%20website%20and%20would%20like%20to%20get%20a%20quote%20"
+                    target="blank"
+                  >
+                    <Button className="mt-4 bg-orange-600 hover:bg-orange-700">
+                      Get Quote
+                    </Button>
+                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
