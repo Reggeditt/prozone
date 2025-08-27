@@ -81,7 +81,7 @@ export function Header() {
 
           <div className="flex items-center space-x-4">
             <a
-              href="https://wa.me/+233266469301?text=Hello%20Prozone.%20I%saw%20your%20website%20and%20would%20like%20to%20get%20a%20quote%20"
+              href="https://wa.me/+233266469301?text=Hello%20Prozone.%20I%20saw%20your%20website%20and%20would%20like%20to%20get%20a%20quote%20"
               target="blank"
             >
               <Button className="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700">
@@ -109,7 +109,7 @@ export function Header() {
                     </Link>
                   ))}
                   <a
-                    href="https://wa.me/+233266469301?text=Hello%20Prozone.%20I%saw%20your%20website%20and%20would%20like%20to%20get%20a%20quote%20"
+                    href="https://wa.me/+233266469301?text=Hello%20Prozone.%20I%20saw%20your%20website%20and%20would%20like%20to%20get%20a%20quote%20"
                     target="blank"
                   >
                     <Button className="mt-4 bg-orange-600 hover:bg-orange-700">
